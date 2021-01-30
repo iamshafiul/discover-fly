@@ -31,4 +31,8 @@ function calculateTotal() {
     let totalPrice = totalAmount + tax;
     document.getElementById('total').innerHTML = "$" + totalPrice;
 
+    //handle book button 
+
+    document.getElementById('modal-body').innerHTML = " You have buy first class ticket " + firstClassTicketCalculateNumber + " and economy ticket " + economyTicketCalculateNumber + " Your total price is " + "$" + totalPrice;
+
 }
