@@ -1,8 +1,9 @@
 // handle ticket change function
-function handleProductChange(price, ticket, isIncrease) {
+function handleTicketChange(ticket, isIncrease) {
     let ticketCount = document.getElementById(ticket).value;
     let ticketCountNumber = parseInt(ticketCount);
     let ticketCountNewNumber = ticketCountNumber;
+
     if (isIncrease == true && ticketCount < 20) {
         ticketCountNewNumber = ticketCountNumber + 1;
     }
@@ -10,17 +11,8 @@ function handleProductChange(price, ticket, isIncrease) {
         ticketCountNewNumber = ticketCountNumber - 1;
     }
     document.getElementById(ticket).value = ticketCountNewNumber;
-    let total = 0;
-    if (ticket == 'first-class') {
-        total = ticketCountNewNumber * 150
-    }
-    if (ticket == 'economy') {
-        total = ticketCountNewNumber * 100;
-    }
-    // document.getElementById(price).innerText = "$" + total;
     calculateTotal()
 }
-
 
 // calculate function
 function calculateTotal() {
